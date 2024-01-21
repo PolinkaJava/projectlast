@@ -1,13 +1,16 @@
-## Описание
+## Description
 
-Это проект, который позволяет обрабатывать файлы переводов, содержащие информацию о суммах, отправителях и получателях денежных переводов. Проект читает файлы из указанной директории, парсит их в список объектов Transaction, и записывает отчет о результатах обработки в файл report.txt.
+This is a project that allows you to process transfer files containing information about amounts, senders and receivers of money transfers. The project reads files from the specified directory, parses them into a list of Transaction objects, and writes a report on the results of processing to the file report.txt.
 
-## Технологии
+## Technologies
 
-Проект написан на языке Java, используя JDK 11. Для работы с файлами используются классы из пакета java.nio.file, для работы с датами и временем используется класс SimpleDateFormat из пакета java.text, для работы со списками используется интерфейс List из пакета java.util.
-После запуска проекта в консоли появится меню с двумя опциями: 1 - Обработать файлы переводов, 0 - Выход. Для обработки файлов переводов нужно ввести 1 и нажать Enter. Затем нужно ввести путь к директории, в которой находятся файлы переводов, и нажать Enter. Проект прочитает все файлы из директории, попытается распарсить их в список объектов Transaction, и выведет результат обработки в консоль. Также проект запишет отчет о результатах обработки в файл report.txt, который будет создан в той же директории, где находится исполняемый файл проекта. Для выхода из проекта нужно ввести 0 и нажать Enter.
+The project is written in Java using JDK 11. The classes from java.nio.file package are used to work with files, SimpleDateFormat class from java.text package is used to work with dates and time, List interface from java.util package is used to work with lists.
+After starting the project, a menu with two options will appear in the console: 1 - Process translation files, 0 - Exit. To process translation files you should enter 1 and press Enter. Then enter the path to the directory where the translation files are located and press Enter. The project will read all files from the directory, try to parse them into the list of Transaction objects, and output the result of processing to the console. The project will also write a report on the processing results to the file report.txt, which will be created in the same directory where the project executable is located. To exit the project, enter 0 and press Enter.
 
-## Формат файлов переводов
 
-Файлы переводов должны иметь следующий формат: каждая строка файла содержит три элемента, разделенных пробелами: номер счета отправителя, номер счета получателя и сумму перевода в рублях.
-Если файл переводов имеет некорректный формат, например, содержит меньше или больше трех элементов в строке, или сумму перевода, которая не является целым числом, то проект выбросит исключение FileParseException и прекратит обработку данного файла.
+
+## Format of transfer files
+
+Transfer files must have the following format: each line of the file contains three elements separated by spaces: the sender's account number, the recipient's account number and the transfer amount in rubles.
+If a transfer file has an incorrect format, for example, it contains less or more than three elements in a line, or a transfer amount that is not an integer, the project will throw a FileParseException exception and stop processing this file.
+
